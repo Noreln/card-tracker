@@ -9,7 +9,7 @@ from app.database import Base
 
 class Source(str, enum.Enum):
     tcgplayer = "tcgplayer"
-    cardmarket = "cardmarket"
+    pricecharting = "pricecharting"
 
 
 class PriceHistory(Base):

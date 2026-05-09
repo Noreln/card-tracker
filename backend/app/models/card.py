@@ -23,7 +23,7 @@ class Card(Base):
     game = Column(Enum(Game))
     rarity = Column(String, nullable=True)
     tcgplayer_id = Column(String, unique=True, nullable=True)
-    cardmarket_id = Column(String, unique=True, nullable=True)
+    pricecharting_id = Column(String, unique=True, nullable=True)
     image_url = Column(String, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
 
