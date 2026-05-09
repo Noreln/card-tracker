@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+}
+
+.brand {
+  color: #6366f1;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Layout */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Hero */
+.hero {
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin-top: 0.25rem;
+}
+
+/* Filters */
+.game-filter,
+.period-selector {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid #334155;
+  background: transparent;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.15s;
+}
+
+button:hover {
+  border-color: #6366f1;
+  color: #e2e8f0;
+}
+
+button.active {
+  background: #6366f1;
+  border-color: #6366f1;
+  color: white;
+}
+
+/* Card Grid */
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.card-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: #1e293b;
+  border-radius: 0.75rem;
+  border: 1px solid #334155;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s;
+}
+
+.card-item:hover {
+  border-color: #6366f1;
+}
+
+.card-thumb {
+  width: 64px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.card-thumb.placeholder {
+  background: #334155;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.card-info h3 {
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.set {
+  color: #94a3b8;
+  font-size: 0.8rem;
+}
+
+.game-badge {
+  font-size: 0.75rem;
+  color: #a5b4fc;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #a5b4fc;
+  margin-top: 0.25rem;
+}
+
+.changes {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+
+/* Price Change Badges */
+.price-change-card {
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.price-change-card .label {
+  color: inherit;
+  opacity: 0.7;
+  font-size: 0.7rem;
+}
+
+.price-change-card.positive {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+}
+
+.price-change-card.negative {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.price-change-card.neutral {
+  background: rgba(148, 163, 184, 0.1);
+  color: #94a3b8;
+}
+
+/* Card Detail */
+.card-detail {
+  max-width: 800px;
+}
+
+.back-link {
+  color: #6366f1;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.card-detail h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.current-price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #a5b4fc;
+  margin-bottom: 1rem;
+}
+
+.card-detail .changes {
+  margin-bottom: 2rem;
+}
+
+.card-detail .changes .price-change-card {
+  font-size: 1rem;
+  padding: 0.4rem 0.75rem;
+}
+
+/* Price Chart */
+.price-chart {
+  background: #1e293b;
+  border-radius: 0.75rem;
+  border: 1px solid #334155;
+  padding: 1.5rem;
+}
+
+/* States */
+.loading,
+.empty,
+.no-data {
+  color: #94a3b8;
+  padding: 2rem 0;
+}
+
+.error {
+  color: #ef4444;
+  padding: 1rem 0;
+}
